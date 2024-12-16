@@ -29,9 +29,13 @@
     user-select: none;
 }
 
+.header .hero .header-text h1{
+    height: 10rem;
+}
+
 .animated-char {
-    display: inline-block; /* Ensure individual animations */
-    font-size: 2rem; /* Adjust as needed */
+    display: inline-block; 
+    font-size: 2rem; 
     font-weight: bold;
     transition: color 0.3s ease;
     animation: fadeIn 0.1s ease-out forwards;
