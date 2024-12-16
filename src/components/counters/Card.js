@@ -1,7 +1,10 @@
 import classes from './Card.module.css';
 
 const Card = (props) => {
-  return <div className={classes.card}>{props.children}</div>;
+
+  const cardStyle = props.className+' '+classes.card;
+
+  return <div className={cardStyle}>{props.children}</div>;
 };
 
 export default Card;
