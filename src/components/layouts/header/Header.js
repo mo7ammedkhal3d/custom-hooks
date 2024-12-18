@@ -55,8 +55,8 @@ const Header = props =>{
                 <img src={cover} />
             </div>
             <nav>
-                <button onClick={props.onShowCounters}>Counters</button>
-                <button onClick={props.onShowTaskSched}>Task Scheduling</button>
+                <button onClick={() => props.onShowCounters('counters')}>Counters</button>
+                <button onClick={() => props.onShowTaskSched('taskScheduling')}>Task Scheduling</button>
             </nav>
         </header>
     );

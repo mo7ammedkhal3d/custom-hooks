@@ -10,7 +10,7 @@ const ForwardCounter = () => {
   useEffect(()=>{
     const identifire = setTimeout(() => {
       setLeftAnimation(false);
-    }, 6000);
+    }, 1000);
 
   },[]);
 

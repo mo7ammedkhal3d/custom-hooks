@@ -11,13 +11,15 @@ function App() {
 
 
 
-  const navigationHandler = () =>{
-    if(showCounters){
-      setShowCounters(false);
-      setShowTaskSched(true);
-    }else {
+  const navigationHandler = (navigate) =>{
+    console.log(navigate);
+    
+    if(navigate === 'counters'){
       setShowCounters(true);
       setShowTaskSched(false);
+    }else {
+      setShowCounters(false);
+      setShowTaskSched(true);
     }
   }
 

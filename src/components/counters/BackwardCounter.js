@@ -10,7 +10,7 @@ const BackwardCounter = () => {
   useEffect(()=>{
     const identifire = setTimeout(() => {
       setRightAnimation(false);
-    }, 6000);
+    }, 1000);
 
   },[]);
 
