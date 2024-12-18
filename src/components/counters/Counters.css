@@ -1,0 +1,32 @@
+.left-anomation{
+    animation: left-animation 1s ease;
+}
+
+@keyframes left-animation {
+    from{
+        transform: translateX(60%);
+    }
+
+    to{
+        transform: translateX(0rem);
+    }
+}
+
+.right-anomation{
+    animation: right-animation 1s ease;
+}
+
+@keyframes right-animation {
+    from{
+        transform: translateX(-60%);
+    }
+
+    to{
+        transform: translateX(0rem);
+    }
+}
+
+.container{
+    width: 100;
+    overflow: hidden;
+}
