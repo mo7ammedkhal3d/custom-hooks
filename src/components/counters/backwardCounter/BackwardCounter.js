@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
-import Card from './Card';
-import useCounter from '../../hooks/use-counter';
+import Card from '../UI/Card/Card';
+import useCounter from '../../../hooks/use-counter';
+import classes from './BackwardCounter.module.css';
 
 const BackwardCounter = () => {
 
@@ -8,9 +9,11 @@ const BackwardCounter = () => {
   const counter = useCounter(false)
 
   useEffect(()=>{
-    const identifire = setTimeout(() => {
+    const identifier = setTimeout(() => {
       setRightAnimation(false);
     }, 6000);
+
+    return () => clearTimeout(identifier);
 
   },[]);
 
