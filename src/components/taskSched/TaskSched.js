@@ -16,7 +16,7 @@ const TaskSched = () =>{
     }
     
     const {isLoading, error, sendRequest: fetchTasks} = useHttp({
-            usrl: 'https://react-http-e7d8f-default-rtdb.firebaseio.com/tasks.json'},
+            url: 'https://react-http-e7d8f-default-rtdb.firebaseio.com/tasks.json'},
             transformTasks
         );
     
