@@ -1,20 +1,22 @@
 import { useEffect, useState } from 'react';
-import Card from './UI/Card/Card';
-import useCounter from '../../hooks/use-counter';
+import useCounter from "./../../hooks/use-counter";
+import Card from './Card';
 
 const BackwardCounter = () => {
 
-  const [rightAnimation,setRightAnimation] = useState(true);
+  const [leftAnimation,setLeftAnimation] = useState(true);
   const counter = useCounter(false)
 
   useEffect(()=>{
-    const identifire = setTimeout(() => {
-      setRightAnimation(false);
-    }, 6000);
+    const identifier = setTimeout(() => {
+      setLeftAnimation(false);
+    }, 1000);
+
+    return () => clearTimeout(identifier);
 
   },[]);
 
-  return <Card className={rightAnimation ? 'right-anomation':''}>{counter}</Card>;
+  return <Card className={leftAnimation ? 'left-animation':''}>{counter}</Card>;
 };
 
 export default BackwardCounter;

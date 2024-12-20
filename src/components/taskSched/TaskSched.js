@@ -1,39 +1,25 @@
 import { Fragment,useState,useEffect } from 'react';
 import NewTask from './NewTask/NewTask';
 import Tasks from './Tasks/Tasks';
+import useHttp from '../../hooks/use-http';
 
 const TaskSched = () =>{
-    const [isLoading, setIsLoading] = useState(false);
-    const [error, setError] = useState(null);
     const [tasks, setTasks] = useState([]);
-  
-    const fetchTasks = async (taskText) => {
-      setIsLoading(true);
-      setError(null);
-      try {
-        const response = await fetch(
-          'https://react-http-e7d8f-default-rtdb.firebaseio.com/tasks.json'
-        );
-  
-        if (!response.ok) {
-          throw new Error('Request failed!');
-        }
-  
-        const data = await response.json();
-  
+
+    const transformTasks = taskObject =>{
         const loadedTasks = [];
   
-        for (const taskKey in data) {
-          loadedTasks.push({ id: taskKey, text: data[taskKey].text });
+        for (const taskKey in taskObject) {
+          loadedTasks.push({ id: taskKey, text: taskObject[taskKey].text });
         }
-  
         setTasks(loadedTasks);
-      } catch (err) {
-        setError(err.message || 'Something went wrong!');
-      }
-      setIsLoading(false);
-    };
-  
+    }
+    
+    const {isLoading, error, sendRequest: fetchTasks} = useHttp({
+            usrl: 'https://react-http-e7d8f-default-rtdb.firebaseio.com/tasks.json'},
+            transformTasks
+        );
+    
     useEffect(() => {
       fetchTasks();
     }, []);
