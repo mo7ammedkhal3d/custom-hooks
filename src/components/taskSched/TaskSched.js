@@ -1,6 +1,13 @@
+import { Fragment } from 'react';
+import NewTask from './NewTask/NewTask';
+import Tasks from './Tasks/Tasks';
+
 const TaskSched = () =>{
     return (
-        <h1>Here will be task Sched project</h1>
+        <Fragment>
+            <NewTask/>
+            <Tasks/>
+        </Fragment>
     );
 }
 
