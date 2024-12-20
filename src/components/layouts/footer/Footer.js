@@ -6,7 +6,7 @@ const Footer = props => {
 
     return (
         <footer className={classes.footer}>
-            <h3><span>&copy;</span> All copy is reserved {year} <span className={classes.corpration}>Mo-khaled <sup>&reg;</sup></span> </h3>
+            <h3><span>&copy;</span> All copy is reserved {year} <a target='_blank' className={classes['github-link']} href='https://github.com/mo7ammedkhal3d'>Mo-khaled <sup>&reg;</sup></a> </h3>
         </footer>
     );
 }

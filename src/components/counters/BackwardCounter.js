@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react';
-import Card from './Card';
+import Card from './UI/Card/Card';
 import useCounter from '../../hooks/use-counter';
 
 const BackwardCounter = () => {
