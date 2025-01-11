@@ -7,10 +7,18 @@
     justify-content: center;
 }
 
-.footer .corpration{
+.footer h3{
+    color: white;
+}
+
+.footer .github-link{
+    cursor: pointer;
+    display: inline-block;
+    text-decoration: none;
+    transition: all 0.5s ease;
     color: gold;
 }
 
-.footer h3{
-    color: white;
+.footer .github-link:hover{
+    transform: scale(1.19) translateX(10px);
 }

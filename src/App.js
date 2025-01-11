@@ -11,9 +11,7 @@ function App() {
 
 
 
-  const navigationHandler = (navigate) =>{
-    console.log(navigate);
-    
+  const navigationHandler = (navigate) =>{    
     if(navigate === 'counters'){
       setShowCounters(true);
       setShowTaskSched(false);

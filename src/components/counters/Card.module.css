@@ -9,16 +9,3 @@
   font-weight: bold;
 }
 
-.right-anomation{
-    animation: right-animation 1s ease;
-}
-
-@keyframes right-animation {
-    from{
-        transform: translateX(-150%);
-    }
-
-    to{
-        transform: translateX(0rem);
-    }
-}
